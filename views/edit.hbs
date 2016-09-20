@@ -1,0 +1,80 @@
+<h1>Edit Movie</h1>
+<hr />
+
+<div class="container">
+  <form class="form-horizontal" action="/" method="POST">
+    <fieldset>
+      <!-- <legend>Create a new blog post</legend> -->
+      <div class="form-group">
+        <label for="title" class="col-lg-2 control-label">Title</label>
+        <div class="col-lg-8">
+          <input type="text" name="title" class="form-control" id="title" value={{movies.title}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="image" class="col-lg-2 control-label">Image URL</label>
+        <div class="col-lg-8">
+          <input type="text" name="imageURL" class="form-control" id="image" value={{movies.imageURL}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="type" class="col-lg-2 control-label">Type</label>
+        <div class="col-lg-10">
+          <select class="form-control" name="type" id="type" select="{{movies.type}}">
+            <option>Comedy</option>
+            <option>Horror</option>
+            <option>Drama</option>
+            <option>Romantic Comedy</option>
+            <option>Science-Fiction</option>
+            <option>Action</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="year" class="col-lg-2 control-label">Year</label>
+        <div class="col-lg-8">
+          <input type="text" name="year" class="form-control" id="year" value={{movies.year}}>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="rating" class="col-lg-2 control-label">Rating (1-5)</label>
+        <div class="col-lg-10">
+          <select class="form-control" name="rating" id="rating" select="{{movies.rating}}">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="col-lg-2 control-label">Description</label>
+        <div class="col-lg-8">
+          <textarea name="description" class="form-control" rows="10" id="description">{{movies.description}}</textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="note" class="col-lg-2 control-label">Notes</label>
+        <div class="col-lg-8">
+          <textarea name="note" class="form-control" rows="5" id="note">{{movies.note}}</textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-8 col-lg-offset-2">
+          <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+          <button type="reset" class="btn btn-default btn-sm">Cancel</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+  <a href="/">Back to homepage</a>
+</div>

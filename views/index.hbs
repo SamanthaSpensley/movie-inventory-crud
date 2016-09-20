@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<hr />
+
+<div class="container">
+
+  <ul class="sortBy">
+    <li><a href="#">Title</a></li>
+    <li><a href="#">Year</a></li>
+    <li><a href="#">Rating</a></li>
+    <li><a href="#">Type</a></li>
+  </ul>
+
+  {{#each movies}}
+  <div class="displayMovies col-lg-3 col-sm-6 col-xs-12">
+    <img src="{{imageURL}}" alt="movie image"/>
+    <h2>{{title}} ({{year}})</h2>
+    <h4>Rating: {{rating}}</h4>
+    <p>{{description}}</p>
+    <!-- <p>{{note}}</p> -->
+    <a href="/movie/edit/{{id}}">edit</a>
+  </div>
+  {{/each}}
+
+
+</div>
